@@ -1,1 +1,5 @@
 # embedded projects
+
+Contains code for IOT and embedded systems projects. Projects are run on a Raspberry Pi and in a Linux Virtual Machine.
+
+Final Project: (located in ee250/project folder due to dependencies in higher folders) IoT system gives users a way to encrypt and decrypt messages in audio signals. The user inputs a message of up to 15 characters on the Raspberry Pi. Then, they choose a key value between 0 and 1000 to seed the encryption frequency with. Both of these values are then sent to the VM with MQTT. Based on the message and the key value, the encryption algorithm running on the VM generates a set of frequencies and creates a unique audio file with the message encoded. The VM then sends this audio information back to the RPi (using MQTT) which then plays the file through a speaker. Then using a separate decrypt program with the proper key, the original message can be extracted from the audio file. The decryption program then displays a graph showing a slice of the audio waveform along the now-decrypted original message.
