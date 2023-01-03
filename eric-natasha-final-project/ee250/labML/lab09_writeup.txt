@@ -1,0 +1,45 @@
+LAB 09 WRITEUP
+Eric Zhong and Natasha Lal
+https://github.com/usc-ee250-fall2022/eric-natasha/tree/labML
+
+
+Question 4: What are the denominations of the US coins from the green, blue and orange distributions? 
+Can you think why the coins from the same denomination might show variation in weight although they are
+ specified to be of the same weight?
+
+Green: pennies
+Blue: nickels
+Orange: dollars
+Variation in weight might occur because coins might have lost metal over time (worn down, so their 
+weights are less), or they might have dirt on them (adds material to each coin, so their weights are more).
+
+
+Question 5: If your vending machine had a weight sensor, how would you use the weight of a coin that was 
+just inserted to find the denomination? 
+
+If there was a weight sensor, you’d check the weight range of the coin (2-3 g, 4-6 g, or 7.5-8.5 g) to 
+identify which denomination the coin fell into.
+
+
+Question 6. We can shine light on the coin and measure the reflected amount of light which should be 
+proportional (directly or in some non-linear way) to the size/area of the coin. Can you guess which 
+sensor on the Grove Pi Kit can be used for this purpose?
+
+We’ll use the Grove PI light sensor to measure the reflected amount of light on the coin.
+
+
+Question 7: Which of the following dataset is linearly separable? Justify your answer using a picture 
+wherever it is difficult to see things in the mind’s eye.
+
+Dataset A is linearly separable: the blue and orange sets of points fit exactly into two groups above 
+and below the red line as shown.
+
+
+Question 11: What are the benefits and drawbacks of using the above method of running the classifier 
+on the cloud vs running  the classifier on a Raspberry Pi installed locally in the vending machines and 
+not having the vending machines connected to the internet? 
+
+By running the classifier on the cloud, you don’t have to depend on the integrity of the vending machines
+to classify the coins. If the classifier was run with the Raspberry Pi in the vending machine, someone
+could easily tamper with it and destroy the results. However, if someone was able to hack into the cloud, 
+the cloud classifier’s integrity would be compromised. 
